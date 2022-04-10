@@ -5,9 +5,21 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #f3f3f3;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.product {
+  padding: 10px;
+  background: #fff;
+  border: 1px solid #ddd;
+  margin-top: 20px;
+
+}
+.buybuttton {
+  padding-left: 10px;
 }

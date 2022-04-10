@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1 ,
+    "title": "Sakız",
+    "price": 0.5
+  },
+  {
+    "id": 2 ,
+    "title": "Kola",
+    "price": 1
+  },
+  {
+    "id": 3 ,
+    "title": "Su",
+    "price": 0.75
+  },
+  {
+    "id": 4 ,
+    "title": "Soda",
+    "price": 1.10
+  }
+
+]
