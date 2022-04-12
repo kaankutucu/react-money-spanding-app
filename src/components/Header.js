@@ -1,9 +1,22 @@
 import React from 'react';
 import {useState} from "react";
 
-function Header({money}) {
+function Header({total,money}) {
     return (
-        <div>Harcamanız için {money} $ bakiyeniz bulunmaktadır.</div>
+        <>
+        <div>
+            {total > 0 && (
+                <>
+                    Harcayacak  {money-total} $ bakiyeniz kalmıştır.
+                </>
+                || (
+                    <>
+                        Harcamanız için {money} $ bakiyeniz bulunmaktadır.
+                    </>
+                )
+            )}
+        </div>
+        </>
     );
 }
 

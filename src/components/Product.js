@@ -40,7 +40,7 @@ function Product({product, basket, setBasket}) {
             <h6>{product.title}</h6>
             <div className="price"> ${product.price}</div>
             <div className="actions">
-                <button className="sellbutton" onClick={removeBasket}>Sat</button>
+                <button disabled = { !basketItem} className="sellbutton" onClick={removeBasket}>Sat</button>
                 <span className="amount">{basketItem && basketItem.amount || 0}</span>
                 <button className="buybutton" onClick={addBasket}>Satın Al</button>
             </div>
