@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Product({product, basket, setBasket}) {
+function Product({product, basket, setBasket, total, money}) {
 
     const basketItem = basket.find(item => item.id === product.id)
 
@@ -42,7 +42,7 @@ function Product({product, basket, setBasket}) {
             <div className="actions">
                 <button disabled = { !basketItem} className="sellbutton" onClick={removeBasket}>Sat</button>
                 <span className="amount">{basketItem && basketItem.amount || 0}</span>
-                <button className="buybutton" onClick={addBasket}>Satın Al</button>
+                <button disabled={total + product.price > money} className="buybutton" onClick={addBasket}>Satın Al</button>
             </div>
         </div>
     );
