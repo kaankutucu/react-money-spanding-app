@@ -1,4 +1,5 @@
 import React from 'react';
+import {moneyFormat} from "../helper";
 
 function Product({product, basket, setBasket, total, money}) {
 
@@ -37,12 +38,13 @@ function Product({product, basket, setBasket, total, money}) {
 
     return (
         <div className="product">
+            <img src={product.image} alt=""/>
             <h6>{product.title}</h6>
-            <div className="price"> ${product.price}</div>
+            <div className="price">  ${moneyFormat(product.price)}</div>
             <div className="actions">
-                <button disabled = { !basketItem} className="sellbutton" onClick={removeBasket}>Sat</button>
+                <button disabled = { !basketItem} className="sell-btn" onClick={removeBasket}>Sat</button>
                 <span className="amount">{basketItem && basketItem.amount || 0}</span>
-                <button disabled={total + product.price > money} className="buybutton" onClick={addBasket}>Satın Al</button>
+                <button disabled={total + product.price > money} className="buy-btn" onClick={addBasket}>Satın Al</button>
             </div>
         </div>
     );

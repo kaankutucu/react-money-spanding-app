@@ -1,11 +1,6 @@
-import React from 'react';
+const moneyFormat = (money) => {
 
-function Helper(props) {
-    return (
-        <div>
-            Helper
-        </div>
-    );
+    return money.toLocaleString()
 }
 
-export default Helper;
+export {moneyFormat}

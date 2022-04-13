@@ -2,9 +2,12 @@ import React from 'react';
 
 function BasketItem({item , product}) {
     return (
-        <div>
-            {product.title} x {item.amount}
-        </div>
+
+        <>
+        <li className="basket-item">
+            {product.title}   <span>x{item.amount}</span>
+        </li>
+        </>
     );
 }
 
